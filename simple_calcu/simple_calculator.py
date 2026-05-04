@@ -63,4 +63,25 @@ class calculation(BasicCalculator):
             raise ValueError("Invalid input! Enter numeric values.")
         
     def run(self): #will be used to run everything
+        self.clear()
+        self.header()
+        try:
+            operation = self.get_operation()
+            num1, num2 = self.get_numbers()
+            if operation == '1':
+                self.result = self.add(num1, num2)
+            elif operation == '2':
+                self.result = self.subtract(num1, num2)
+            elif operation == '3':
+                self.result = self.multiply(num1, num2)
+            elif operation == '4':
+                self.result = self.divide(num1, num2)
+        except ValueError as e:
+            print(f"Input error occurred: {e}")
+        except ZeroDivisionError as e:
+            print(f"Math error occurred: {e}")
+
+        again = input("Do you want to perform another calculation? (y/n): ")
+        if again.lower() != 'y':
+            print("Thank you!")
 

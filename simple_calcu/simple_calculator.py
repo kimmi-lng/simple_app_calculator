@@ -44,6 +44,16 @@ class calculation(BasicCalculator):
         super().__init__() 
 #use try and exept to ask for users inputs and see errors
     def get_operation(self):
+        print("Select operation:")
+        print("[1] Add")
+        print("[2] Subtract")
+        print("[3] Multiply")
+        print("[4] Divide") 
+        operation = input("Enter choice (1-4): ")
+        if operation not in ['1', '2', '3', '4']:
+            raise ValueError("Invalid operation choice!")
+        return operation
+    
     def get_numbers(self):
     def run(self): #will be used to run everything
 

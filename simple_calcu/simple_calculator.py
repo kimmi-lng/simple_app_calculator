@@ -1,13 +1,4 @@
 # Activity 6: Exception Handling
-
-# Instructions:
-# - Do the programming exercises in module 3 page 21.
-# - Upload your code in a new GitHub repository.
-# - Git commit on every milestone, part of your grade is based on your git commit. 
-# - Code should be OOP and have inheritance implementation
-# - Feel free to add anything that will make your program maangas
-# - Create a demo vid
-# - Send me the link of your GitHub repo and demo before May 9
 import os
 #parent class
 class BasicCalculator:
@@ -39,10 +30,10 @@ class BasicCalculator:
         return num1 / num2
 
 #child class
-class calculation(BasicCalculator):
+class calculation(BasicCalculator): #use try and exept to ask for users inputs and see errors
     def __init__(self):
-        super().__init__() 
-#use try and exept to ask for users inputs and see errors
+        super().__init__() #initialize the parent class
+
     def get_operation(self):
         print("Select operation:")
         print("[1] Add")
@@ -91,5 +82,5 @@ class calculation(BasicCalculator):
                 break
 
 if __name__ == "__main__":
-    app = calculation()
-    app.run()
+    calc = calculation()
+    calc.run()

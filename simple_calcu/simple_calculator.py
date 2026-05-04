@@ -8,13 +8,21 @@
 # - Feel free to add anything that will make your program maangas
 # - Create a demo vid
 # - Send me the link of your GitHub repo and demo before May 9
-
+import os
 #parent class
 class BasicCalculator:
-
+    def __init__(self):
+        self.result = 0
+        
 #for additional
     def clear(self): #clear the screen import os?
+        os.system('cls' if os.name == 'nt' else 'clear')
+
     def header(self): #display the header
+        print("*" * 25)
+        print("SIMPLE CALCULATOR".center(25))
+        print("*" * 25)
+
 #operations
     def add(self, num1, num2):
     def subtract(self, num1, num2):
@@ -25,3 +33,4 @@ class BasicCalculator:
 class calculation(BasicCalculator):
     def __init__(self):
         super().__init__() 
+#use try and exept to ask for users inputs and see errors

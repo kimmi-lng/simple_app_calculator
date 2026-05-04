@@ -13,7 +13,7 @@ import os
 class BasicCalculator:
     def __init__(self):
         self.result = 0
-        
+
 #for additional
     def clear(self): #clear the screen import os?
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -25,9 +25,18 @@ class BasicCalculator:
 
 #operations
     def add(self, num1, num2):
+        return num1 + num2
+    
     def subtract(self, num1, num2):
+        return num1 - num2
+    
     def multiply(self, num1, num2):
+        return num1 * num2
+    
     def divide(self, num1, num2):
+        if num2 == 0:
+            raise ValueError("You cannot divide by nothing bro!")
+        return num1 / num2
 
 #child class
 class calculation(BasicCalculator):

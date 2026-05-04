@@ -55,5 +55,12 @@ class calculation(BasicCalculator):
         return operation
     
     def get_numbers(self):
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+            return num1, num2
+        except ValueError:
+            raise ValueError("Invalid input! Enter numeric values.")
+        
     def run(self): #will be used to run everything
 

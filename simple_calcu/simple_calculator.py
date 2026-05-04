@@ -43,3 +43,7 @@ class calculation(BasicCalculator):
     def __init__(self):
         super().__init__() 
 #use try and exept to ask for users inputs and see errors
+    def get_operation(self):
+    def get_numbers(self):
+    def run(self): #will be used to run everything
+

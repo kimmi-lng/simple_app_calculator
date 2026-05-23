@@ -1,3 +1,5 @@
+from simple_calculator import BasicCalculator
+
 class calculation(BasicCalculator): #use try and exept to ask for users inputs and see errors
     def __init__(self):
         super().__init__() #initialize the parent class

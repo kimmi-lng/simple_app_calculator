@@ -29,6 +29,3 @@ class BasicCalculator:
             raise ValueError("You cannot divide by nothing bro!")
         return num1 / num2
 
-if __name__ == "__main__":
-    calc = calculation()
-    calc.run()
